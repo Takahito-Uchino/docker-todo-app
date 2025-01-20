@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo App</h1>
+        <form action="{{ url_for('add_todo') }}" method="post">
+            <input type="text" name="task" placeholder="Todoを追加" required>
+            <button type="submit">追加</button>
+        </form>
+        <ul class="todo-list">
+            {% for todo in todos %}
+            <li class="todo-item">
+                <span>{{ todo.task }}</span>
+                <a href="{{ url_for('delete_todo', todo_id=todo.id) }}">削除</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>

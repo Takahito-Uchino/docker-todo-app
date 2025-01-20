@@ -1,14 +1,15 @@
-FROM python:3.10-slim
+# FROM python:3.10-slim
+# FROM python:3.10
 
-WORKDIR /app
+# WORKDIR /app
 
-COPY requirements.txt /app/
+# COPY requirements.txt /app/
 
-RUN pip install --no-cache-dir -r requirements.txt
+# RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app
+# COPY . /app
 
-RUN python -c "import sqlite3; sqlite3.connect('todo.db').executescript(open('schema.sql').read())"
+# RUN python -c "import sqlite3; sqlite3.connect('todo.db').executescript(open('schema.sql').read())"
 
-EXPOSE 5000
-CMD ["python", "app.py"]
+# EXPOSE 5000
+# CMD ["python", "app.py"]

@@ -5,7 +5,7 @@
 # 作業ディレクトリを指定
 # WORKDIR /app
 
-# ファイルをコピー
+# 依存関係ファイルをコピー
 # COPY requirements.txt /app/
 
 # パッケージをインストール

@@ -17,8 +17,5 @@
 # データベースを作成
 # RUN python -c "import sqlite3; sqlite3.connect('todo.db').executescript(open('schema.sql').read())"
 
-# ポートを公開
-# EXPOSE 5000
-
 # コマンドを実行
 # CMD ["python", "app.py"]
